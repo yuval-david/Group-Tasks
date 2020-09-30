@@ -1,0 +1,17 @@
+
+
+
+table {
+    width: 55vw;
+    margin-left: 22vw;
+    margin-right: 10vw;
+    margin-top: 15vh;
+    background-color: rgb(248, 228, 204);
+    
+  }
+
+  th {
+    font-weight: bold;
+    font-size: large;
+  }
+

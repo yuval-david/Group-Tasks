@@ -1,0 +1,33 @@
+<!-- <h1 *ngFor="let t of tasks"> {{t.taskDescription}} </h1> -->
+<div class="table-container">
+    <table mat-table [dataSource]="tasks" class="mat-elevation-z8">
+
+        <!-- Description Column -->
+        <ng-container matColumnDef="taskDescription">
+            <th mat-header-cell *matHeaderCellDef> Description </th>
+            <td mat-cell *matCellDef="let t"> {{t.taskDescription}} </td>
+        </ng-container>
+
+        <!-- Date Column -->
+        <ng-container matColumnDef="date">
+            <th mat-header-cell *matHeaderCellDef> Date </th>
+            <td mat-cell *matCellDef="let t"> {{t.date | date}} </td>
+        </ng-container>
+
+        <!-- Name Column -->
+        <ng-container matColumnDef="name">
+            <th mat-header-cell *matHeaderCellDef> Name </th>
+            <td mat-cell *matCellDef="let t"> {{t.name}} </td>
+        </ng-container>
+
+        <ng-container matColumnDef="actions">
+            <mat-header-cell *matHeaderCellDef> </mat-header-cell>
+            <mat-cell *matCellDef="let t">
+                <button (click)="deleteClick(t.taskID)" mat-button>Delete </button>
+            </mat-cell>
+        </ng-container>
+
+        <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+        <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+    </table>
+</div>
