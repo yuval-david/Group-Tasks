@@ -1,7 +1,6 @@
 # Group-Tasks
 Group Tasks app
 
-# About
 This is an app to sync all the tasks of a group of people.
 Every group member can add a task for himself or for another member and delete it when it complete.
 
